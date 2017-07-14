@@ -1,3 +1,5 @@
+// @flow
+
 import rootReducer from '../../../redux/modules/index';
 
 describe('root reducer', () => {

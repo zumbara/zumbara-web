@@ -1,3 +1,5 @@
+// @flow
+
 import createHistory from 'history/createBrowserHistory';
 import configureStore from '../../redux/configureStore';
 
