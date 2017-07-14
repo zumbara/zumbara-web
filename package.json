@@ -1,0 +1,71 @@
+{
+  "name": "zumbara-web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apisauce": "^0.14.0",
+    "history": "^4.6.3",
+    "normalize.css": "^7.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "next",
+    "react-scripts": "1.0.10",
+    "redux": "^3.7.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.2",
+    "codecov": "^2.2.0",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-react": "^7.1.0",
+    "istanbul": "^0.4.5",
+    "jest": "^20.0.4",
+    "lint-staged": "^4.0.1",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.0.2",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.5.2",
+    "react-test-renderer": "^15.6.1",
+    "stylelint": "^7.12.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-processor-styled-components": "^0.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint:eslint": "eslint .",
+    "lint:stylelint": "stylelint 'src/**/*.js'",
+    "lint": "yarn run lint:eslint && yarn run lint:stylelint",
+    "format": "prettier --print-width=100 --single-quote --trailing-comma all --write \"src/**/*.js\"",
+    "lint-staged": "lint-staged",
+    "test": "react-scripts test --env=jsdom",
+    "test:ci": "yarn run lint && yarn test && yarn run coverage",
+    "coverage": "yarn run test -- --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js --collectCoverageFrom=!src/registerServiceWorker.js",
+    "postcoverage": "istanbul check-coverage --statements 80 --functions 80 --branches 80 --lines 80",
+    "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run format",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint-staged",
+  "jest": {
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ]
+  }
+}
