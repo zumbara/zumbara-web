@@ -1,14 +1,15 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "prettier", "plugin:flowtype/recommended"],
   "env": {
     "browser": true,
     "jest": true
   },
-  "plugins": ["react", "jsx-a11y", "import", "prettier"],
+  "plugins": ["react", "jsx-a11y", "import", "prettier", "flowtype"],
   "rules": {
     "no-console": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-wrap-multilines": "off",
+    "flowtype/require-valid-file-annotation": ["error", "always"],
     "prettier/prettier": [
       "error",
       {
