@@ -1,9 +1,30 @@
 [ignore]
+<PROJECT_ROOT>/node_modules/stylelint/.*
+<PROJECT_ROOT>/node_modules/styled-components/src/test/theme.test.js
+<PROJECT_ROOT>/node_modules/styled-components/src/primitives/index.js
 
 [include]
 
 [libs]
+flow-typed/
+libdefs.js
+node_modules/styled-components/flow-typed/react-native.js
 
 [options]
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
 
-[lints]
+module.name_mapper='danger' -> 'empty/object'
+module.name_mapper='^\(.*\)\.\(jpg\|png\|gif\|eot\|svg\|ttf\|woff\|woff2\|mp4\|webm\)$' -> 'react-scripts/config/flow/file'
+
+suppress_type=$FlowIssue
+suppress_type=$FlowFixMe
+suppress_type=$FixMe
+suppress_comment=.*\\$FlowIgnoreNextLine
+suppress_comment=.*\\$FlowFixMe
+suppress_comment=.*\\$FlowInvalidInputTest
+
+unsafe.enable_getters_and_setters=true
+
+[version]
+^0.50.0

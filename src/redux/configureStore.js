@@ -1,3 +1,5 @@
+// @flow
+
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
@@ -5,7 +7,7 @@ import { routerMiddleware } from 'react-router-redux';
 
 import rootReducer from './modules';
 
-const configureStore = (prelodedState, history) => {
+const configureStore = (prelodedState?: Object, history: Object) => {
   const middlewares = [thunk, routerMiddleware(history)];
 
   /* istanbul ignore if */
