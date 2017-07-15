@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
+import 'normalize.css/normalize.css';
+
 import configureStore from './redux/configureStore';
 import registerServiceWorker from './registerServiceWorker';
 
