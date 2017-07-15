@@ -10,3 +10,13 @@ cache: yarn
 script:
   - yarn run test:ci
   - codecov
+
+before_deploy:
+  - yarn run styleguide:build
+  - cp ./styleguide/index.html ./styleguide/200.html
+
+deploy:
+  - provider: surge
+    project: ./styleguide/
+    domain: zumbara-style-guide.surge.sh
+    skip_cleanup: true

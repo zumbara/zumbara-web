@@ -2,6 +2,8 @@
 <PROJECT_ROOT>/node_modules/stylelint/.*
 <PROJECT_ROOT>/node_modules/styled-components/src/test/theme.test.js
 <PROJECT_ROOT>/node_modules/styled-components/src/primitives/index.js
+<PROJECT_ROOT>/node_modules/jss/.*
+<PROJECT_ROOT>/node_modules/findup/test/.*
 
 [include]
 
